@@ -1,3 +1,31 @@
+
+old version - http://karl-cooper.co.uk/karlsims/hyperworldtour/
+
+# frontend
+* first iteration use greenscreen
+* setup a webcam set
+    - https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
+    - you use camera and canvas api to do so.
+
+* work out means of getting google maps images
+    - places api - https://developers.google.com/maps/documentation/streetview/intro
+    - maybe free?
+    - maybe download a batch of places so we encur a fixed cost
+        - https://developers.google.com/maps/documentation/streetview/intro
+        - https://developers.google.com/maps/documentation/streetview/metadata
+        - https://developers.google.com/places/web-service/photos
+        - https://developers.google.com/maps/documentation/streetview/get-api-key
+    - need reverse geo somehow
+        - metadata api
+
+maybe lookup geolocations of famous landmarks
+
+## Locations
+* record where users take photos for personalisation
+* save just the lat long locations
+
+
+
 # HYPER WORLD TOUR V2
 
 ## Action Plan
@@ -20,6 +48,8 @@
 * [insight_project/Segmentation_Model.ipynb at master · jmlb/insight_project · GitHub](https://github.com/jmlb/insight_project/blob/master/Segmentation_Model.ipynb)
 * https://github.com/tensorflow/tfjs-models/tree/master/body-pix
 
+
+# Backend
 
 <!-- https://www.tensorflow.org/tutorials/images/segmentation -->
 
