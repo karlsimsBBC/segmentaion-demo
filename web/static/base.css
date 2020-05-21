@@ -1,0 +1,56 @@
+#video {
+  width: 700px;
+  height: 500px;
+}
+
+#photo {
+  width: 700px;
+  height: 500px;
+}
+
+#source {
+  width: 700px;
+  height: 500px;
+}
+
+#canvas {
+  background-repeat: no-repeat;
+  background-color: pink;
+  background-image: url(streetview.jpeg);
+}
+
+.col {
+  /* flex: 1; */
+  margin: 8px;
+  width: min-content;
+}
+
+label {
+  text-align: center;
+  display: block;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+#startbutton {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 7px 14px;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.contentarea {
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+}

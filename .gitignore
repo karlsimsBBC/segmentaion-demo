@@ -1,0 +1,12 @@
+model/dataset
+model/data
+env
+.DS_Store
+.vscode
+
+model/.ipynb_checkpoints
+model/tfjs
+model/model.h5
+model/model.h5.bk
+
+*/notes.md
