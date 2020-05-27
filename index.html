@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Segmentation Demo</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./static/index.css" type="text/css" media="all">
+</head>
+
+<style>
+
+</style>
+
+<body>
+  <header>
+    <div class="header-title">
+      <h1 id="logo">Segmentation Demo</h1>
+    </div>
+  </header>
+  <div class="container">
+
+    <main>
+      <canvas id="canvas"></canvas>
+      <div id="message">Loading Model...</div>
+      <div id="photo-album"></div>
+    </main>
+  </div>
+  <img id="bg-img" src="static/land.jpg">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.0/dist/tf.min.js">
+  </script>
+  <script src="./static/model.js"></script>
+</body>
+
+</html>

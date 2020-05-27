@@ -13,7 +13,22 @@ tf.serialization.SerializationMap.register(Lambda);
 const maxColorValue = tf.scalar(255);
 const one = tf.scalar(1);
 
-const imgCanvas = document.createElement("canvas");
+const imgCanvas = document.createElement('canvas');
+const photoAlbum = document.getElementById('photo-album');
+
+const message = document.getElementById('message');
+
+
+function takePicture() {
+  let photo = document.createElement('img');
+  photo.className = 'photo';
+  let image = canvas.toDataURL('image/png');
+  photo.setAttribute('src', image);
+  photo.width = 300;
+  photoAlbum.appendChild(photo);
+}
+
+// document.getElementById('photo-btn').addEventListener('click', takePicture)
 
 
 
@@ -50,8 +65,8 @@ class UNet {
     let H = image.shape[0],
       W = image.shape[1];
 
-    let padUnitX = 200
-    let padUnitY = 100
+    let padUnitX = 0
+    let padUnitY = 0
 
     let bg = tf.browser.fromPixels(source)
       .resizeBilinear([H + padUnitY, W + padUnitX * 2]);
@@ -79,11 +94,11 @@ var background;
 
 async function app() {
   const videoElement = document.createElement('video');
-  videoElement.width = 500;
-  videoElement.height = 300;
+  videoElement.width = 800;
+  videoElement.height = 480;
 
   const net = new UNet();
-  await net.load('./static/tfjs/model/model.json')
+  await net.load('./static/tfjs/model/model.json');
 
   const cam = await tf.data.webcam(videoElement);
   const canvas = document.getElementById("canvas");
@@ -95,19 +110,22 @@ async function app() {
 
   let recording = true;
 
-  // while (recording) {
-  // using engine scope functions to control memory
-  // because wrapping tidy around aysnc functions dosen't work
-  // and if we don't tidy up massive piles of tensors build up
-  // behind the scence.
-  tf.engine().startScope(); // memory scope start
+  message.textContent = '';
 
-  let img = await cam.capture();
-  let segmentedImage = await net.segment(img);
-  await tf.browser.toPixels(segmentedImage, canvas);
 
-  tf.engine().endScope(); // memory scope end
-  // }
+  while (recording) {
+    // using engine scope functions to control memory
+    // because wrapping tidy around aysnc functions dosen't work
+    // and if we don't tidy up massive piles of tensors build up
+    // behind the scence.
+    tf.engine().startScope(); // memory scope start
+
+    let img = await cam.capture();
+    let segmentedImage = await net.segment(img);
+    await tf.browser.toPixels(segmentedImage, canvas);
+
+    tf.engine().endScope(); // memory scope end
+  }
 
   cam.stop();
 }
