@@ -1,10 +1,8 @@
-# Hyper World Tour (v2)
-*Tired of not having holiday pics to show off to your friends?*
+# Segmentation Demo
+Real-time image segmentation in the browser with TensorflowJS.
 
-*No money to travel or trapped in a global lockdown?*
+**(Live demo)[https://karlsimsbbc.github.io/segmentaion-demo/]**
 
-*Hate foreign people, food and culture?*
+Uses U-Net convolutional neural network trained with (laurentmih/aisegmentcom-matting-human-datasets)[https://www.kaggle.com/laurentmih/aisegmentcom-matting-human-datasets] dataset and built with keras.
 
-*Then your journey starts here…*
-
-Hyper World Tour lets you create simulated holiday photos in random locations around the world using google street view.
+Not really polished and needs some tweaking but does provides an example of model training and browser integration workflow. Was initially designed as a iteration on a personal project, (Hyper World Tour)[http://karl-cooper.co.uk/karlsims/hyperworldtour/].
