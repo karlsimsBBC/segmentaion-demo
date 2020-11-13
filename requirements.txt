@@ -74,7 +74,7 @@ scipy==1.4.1
 Send2Trash==1.5.0
 six==1.14.0
 tensorboard==2.1.1
-tensorflow-cpu==2.1.0
+tensorflow-cpu==2.3.1
 tensorflow-estimator==2.1.0
 tensorflow-hub==0.7.0
 tensorflowjs==1.7.4
